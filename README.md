@@ -1,16 +1,16 @@
 # React Native Template
 
 <p>
-  <a href="https://www.npmjs.com/package/react-native-template-eslam-elmeniawy">
-    <img alt="npm Version" src="https://img.shields.io/npm/v/react-native-template-eslam-elmeniawy.svg" />
+  <a href="https://www.npmjs.com/package/roqay-react-native-template">
+    <img alt="npm Version" src="https://img.shields.io/npm/v/roqay-react-native-template.svg" />
   </a>
-  <a href="https://github.com/EslamElMeniawy/react-native-temp#readme">
+  <a href="https://github.com/Roqay/react-native-temp#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/Documented%3F-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/EslamElMeniawy/react-native-temp/graphs/commit-activity">
+  <a href="https://github.com/Roqay/react-native-temp/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/EslamElMeniawy/react-native-temp/blob/master/LICENSE">
+  <a href="https://github.com/Roqay/react-native-temp/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 </p>
@@ -30,7 +30,7 @@
 ## Usage
 
 ```sh
-npx react-native init MyApp --template react-native-template-eslam-elmeniawy
+npx react-native init MyApp --template roqay-react-native-template
 ```
 
 ### Additional Setup

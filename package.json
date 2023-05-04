@@ -1,5 +1,5 @@
 {
-  "name": "react-native-template-eslam-elmeniawy",
+  "name": "roqay-react-native-template",
   "version": "2.7.0",
   "description": "React Native template with initial setup.",
   "scripts": {
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EslamElMeniawy/react-native-temp.git"
+    "url": "git+https://github.com/Roqay/react-native-temp.git"
   },
   "keywords": [
     "react-native",
@@ -27,9 +27,9 @@
   "author": "Eslam El-Meniawy <eslam.elmeniawy@gmail.com> (https://eslamelmeniawy.github.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EslamElMeniawy/react-native-temp/issues"
+    "url": "https://github.com/Roqay/react-native-temp/issues"
   },
-  "homepage": "https://github.com/EslamElMeniawy/react-native-temp#readme",
+  "homepage": "https://github.com/Roqay/react-native-temp#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
