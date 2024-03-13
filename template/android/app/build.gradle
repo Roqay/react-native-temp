@@ -1,5 +1,10 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: "org.jetbrains.kotlin.android"
+
+// Added for "react-native-firebase".
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 // Added for 'react-native-config'
 project.ext.envConfigFiles = [
@@ -20,8 +25,7 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 apply from: "../../node_modules/react-native-vector-image/strip_svgs.gradle"
 
 // Added for 'Firebase'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -92,8 +96,8 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
+    
 
     namespace "com.tempapp"
 
@@ -102,7 +106,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0-alpha.0"
+        versionName "1.0.0"
 
         // Added for enabling multidex.
         multiDexEnabled true
@@ -164,7 +168,7 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    implementation("com.facebook.react:flipper-integration")
     // Added for fixing crash appeared in some devices in Firebase.
     // java.lang.UnsatisfiedLinkError: couldn't find DSO to load: libhermes.so
     implementation 'com.facebook.soloader:soloader:0.10.5'
@@ -172,17 +176,7 @@ dependencies {
     // Added for enabling multidex.
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    // Added for splash screen.
-    implementation "androidx.core:core-splashscreen:1.0.0"
 
-    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
-
-    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
-        exclude group:'com.squareup.okhttp3', module:'okhttp'
-    }
-
-    debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
-    
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
